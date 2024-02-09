@@ -59,3 +59,4 @@ C:\Users\karin\Documents\Projetos\rocketseat-auction\scr\RocketseatAuction.API\b
 C:\Users\karin\Documents\Projetos\rocketseat-auction\scr\RocketseatAuction.API\bin\Debug\net8.0\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\karin\Documents\Projetos\rocketseat-auction\scr\RocketseatAuction.API\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\karin\Documents\Projetos\rocketseat-auction\scr\RocketseatAuction.API\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\karin\Documents\Projetos\rocketseat-auction\scr\RocketseatAuction.API\obj\Debug\net8.0\RocketseatAuction.API.sourcelink.json
