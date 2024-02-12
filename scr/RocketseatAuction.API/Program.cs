@@ -12,6 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddSwaggerGen(options =>
 {
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
@@ -44,9 +45,9 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 builder.Services.AddScoped<AuthenticationUserAttribute>();
-builder.Services.AddScoped<LoggedUser>();
 builder.Services.AddScoped<CreateOfferUseCase>();
 builder.Services.AddScoped<GetCurrentAuctionUseCase>();
+builder.Services.AddScoped<ILoggedUser, LoggedUser>();
 builder.Services.AddScoped<IAuctionRepository, AuctionRepository>();
 builder.Services.AddScoped<IOfferRepository, OfferRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
@@ -54,7 +55,6 @@ builder.Services.AddDbContext<RocketseatAuctionDbContext>(options =>
 {
     options.UseSqlite("Data Source=C:\\Users\\karin\\Documents\\Projetos\\rocketseat-auction\\leilaoDbNLW.db");
 });
-builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 
